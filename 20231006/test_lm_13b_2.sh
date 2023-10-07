@@ -7,7 +7,7 @@ MODEL_PATH="khalidsaifullaah/lca13"
 MODEL_NAME="claude2_alpaca_new_13b"
 
 export TRANSFORMERS_CACHE=/export/jchen169/Ming/cache
-export CUDA_VISIBLE_DEVICES=6,7
+export CUDA_VISIBLE_DEVICES=7
 
 # Run MMLU
 python main.py \
@@ -19,7 +19,3 @@ python main.py \
     --no_cache \
     --device cuda \
     --num_fewshot 5
-
-
-# Run Extract Result
-python extract_results.py --model_name $MODEL_NAME

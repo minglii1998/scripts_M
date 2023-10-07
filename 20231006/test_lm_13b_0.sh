@@ -7,7 +7,7 @@ MODEL_PATH="khalidsaifullaah/lca13"
 MODEL_NAME="claude2_alpaca_new_13b"
 
 export TRANSFORMERS_CACHE=/export/jchen169/Ming/cache
-export CUDA_VISIBLE_DEVICES=2,3
+export CUDA_VISIBLE_DEVICES=5
 # Run ARC
 python main.py \
     --model hf-causal-experimental \
