@@ -1,6 +1,5 @@
 #!/bin/bash
 
-conda activate lm_eval
 cd /export/jchen169/Ming/lm-evaluation-harness
 
 # Define common parameters
@@ -14,7 +13,7 @@ python main.py \
     --model hf-causal-experimental \
     --model_args pretrained=$MODEL_PATH,use_accelerate=True \
     --tasks arc_challenge \
-    --batch_size 4 \
+    --batch_size 8 \
     --output_path results/$MODEL_NAME/ARC.json \
     --no_cache \
     --device cuda \
@@ -25,7 +24,7 @@ python main.py \
     --model hf-causal-experimental \
     --model_args pretrained=$MODEL_PATH,use_accelerate=True \
     --tasks hellaswag \
-    --batch_size 4 \
+    --batch_size 8 \
     --output_path results/$MODEL_NAME/HellaSwag.json \
     --no_cache \
     --device cuda \
@@ -36,7 +35,7 @@ python main.py \
     --model hf-causal-experimental \
     --model_args pretrained=$MODEL_PATH,use_accelerate=True \
     --tasks hendrycksTest-* \
-    --batch_size 4 \
+    --batch_size 8 \
     --output_path results/$MODEL_NAME/MMLU.json \
     --no_cache \
     --device cuda \
@@ -47,7 +46,7 @@ python main.py \
     --model hf-causal-experimental \
     --model_args pretrained=$MODEL_PATH,use_accelerate=True \
     --tasks truthfulqa_mc \
-    --batch_size 4 \
+    --batch_size 8 \
     --output_path results/$MODEL_NAME/TruthfulQA.json \
     --no_cache \
     --device cuda
