@@ -6,6 +6,7 @@ cd /export/jchen169/Ming/lm-evaluation-harness
 MODEL_PATH="khalidsaifullaah/lca13"
 MODEL_NAME="claude2_alpaca_new_13b"
 
+export HF_HOME=/export/jchen169/Ming/cache
 export TRANSFORMERS_CACHE=/export/jchen169/Ming/cache
 export CUDA_VISIBLE_DEVICES=6,7
 
