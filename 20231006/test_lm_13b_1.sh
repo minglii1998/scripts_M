@@ -7,15 +7,16 @@ MODEL_PATH="khalidsaifullaah/lca13"
 MODEL_NAME="claude2_alpaca_new_13b"
 
 export TRANSFORMERS_CACHE=/export/jchen169/Ming/cache
-export CUDA_VISIBLE_DEVICES=6,7
+export CUDA_VISIBLE_DEVICES=4,5
 
-# Run MMLU
+# Run HellaSwag
 python main.py \
     --model hf-causal-experimental \
-    --model_args pretrained=$MODEL_PATH,use_accelerate=True \
-    --tasks hendrycksTest-* \
+    --model_args pretrained=$MODEL_PATH \
+    --tasks hellaswag \
     --batch_size 1 \
-    --output_path results/$MODEL_NAME/MMLU.json \
+    --output_path results/$MODEL_NAME/HellaSwag.json \
     --no_cache \
     --device cuda \
-    --num_fewshot 5
+    --num_fewshot 10
+
