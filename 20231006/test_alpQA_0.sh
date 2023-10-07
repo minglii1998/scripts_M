@@ -8,7 +8,7 @@ MODEL_NAME="try_alp_QA_sharegpt"
 
 export HF_HOME=/export/jchen169/Ming/cache
 export TRANSFORMERS_CACHE=/export/jchen169/Ming/cache
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=2
 
 # Run ARC
 python main.py \
