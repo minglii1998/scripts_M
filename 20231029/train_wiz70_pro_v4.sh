@@ -18,7 +18,7 @@ do
             --lazy_preprocess False \
             --cache_dir ../cache \
             --bf16 True \
-            --output_dir /root/scratch/trained_models_fs/wiz70_pro_v4_ppl_vicuna_${i}epo \
+            --output_dir /export/jchen169/Ming/trained_models_fs/wiz70_pro_v4_ppl_vicuna_${i}epo \
             --num_train_epochs ${i} \
             --per_device_train_batch_size 8 \
             --per_device_eval_batch_size 8 \
